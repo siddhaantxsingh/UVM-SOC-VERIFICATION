@@ -1,0 +1,33 @@
+$ verilator --version
+Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+$ verilator --lint-only --assert -Wall sva/verilator_sva_probe.sv
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:12:67: Unsupported: ## () cycle delay range expression
+   12 |   ap5: assert property (@(posedge clk) disable iff (!rst_n) a |-> ##1 b) else $error("ap5");
+      |                                                                   ^~
+                    ... For error description see https://verilator.org/warn/UNSUPPORTED?v=5.020
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:12:71: Unsupported: ## (in sequence expression)
+   12 |   ap5: assert property (@(posedge clk) disable iff (!rst_n) a |-> ##1 b) else $error("ap5");
+      |                                                                       ^
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:15:3: Unsupported: sequence
+   15 |   sequence s; a ##1 b; endsequence
+      |   ^~~~~~~~
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:15:17: Unsupported: ## () cycle delay range expression
+   15 |   sequence s; a ##1 b; endsequence
+      |                 ^~
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:15:19: Unsupported: ## (in sequence expression)
+   15 |   sequence s; a ##1 b; endsequence
+      |                   ^
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:17:68: Unsupported: [*] boolean abbrev expression
+   17 |   ap8: assert property (@(posedge clk) disable iff (!rst_n) a |-> b[*2]) else $error("ap8");
+      |                                                                    ^~
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:17:70: Unsupported: boolean abbrev (in sequence expression)
+   17 |   ap8: assert property (@(posedge clk) disable iff (!rst_n) a |-> b[*2]) else $error("ap8");
+      |                                                                      ^
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:18:67: Unsupported: ## range cycle delay range expression
+   18 |   ap9: assert property (@(posedge clk) disable iff (!rst_n) a |-> ##[1:3] b) else $error("ap9");
+      |                                                                   ^~
+%Error-UNSUPPORTED: sva/verilator_sva_probe.sv:18:75: Unsupported: ## (in sequence expression)
+   18 |   ap9: assert property (@(posedge clk) disable iff (!rst_n) a |-> ##[1:3] b) else $error("ap9");
+      |                                                                           ^
+%Error: Exiting due to 9 error(s)
+        ... See the manual at https://verilator.org/verilator_doc.html for more assistance.

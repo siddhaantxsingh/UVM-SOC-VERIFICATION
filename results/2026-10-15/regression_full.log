@@ -1,0 +1,37 @@
+seed 1: 9/9 passed in 13 s 
+seed 2: 9/9 passed in 13 s 
+seed 3: 9/9 passed in 14 s 
+seed 4: 9/9 passed in 18 s 
+seed 5: 9/9 passed in 16 s 
+seed 6: 9/9 passed in 20 s 
+seed 7: 9/9 passed in 20 s 
+seed 8: 9/9 passed in 15 s 
+seed 9: 9/9 passed in 19 s 
+seed 10: 9/9 passed in 20 s 
+SVA failures on clean RTL: none
+merged functional coverage: 82/82 bins (100.0 %); holes: []
+BUG_UART_PARITY        caught by UartTxTest, StressTest; SVA: UART_TX_PARITY_CORRECT
+BUG_UART_FIFO_DEPTH    caught by UartTxTest, StressTest; SVA: UART_TX_FULL_AT_DEPTH
+BUG_RX_SAMPLE          caught by UartRxTest, StressTest, RalW1cTest; SVA: UART_RX_SAMPLES_MID_BIT
+BUG_UART_W1C           caught by UartRxTest, RalW1cTest; SVA: UART_W1C_CLEARS_OVERRUN
+BUG_UART_NOWAIT        caught by RegisterTest, UartTxTest, UartRxTest, IntcTest, StressTest, RalRegisterTest, RalW1cTest; SVA: UART_FIRST_ACCESS_CYCLE_WAITS
+BUG_UART_BAUD_CLAMP    caught by UartTxTest; SVA: UART_BAUD_AT_LEAST_4
+BUG_TIMER_RELOAD       caught by TimerTest; SVA: TIMER_MATCH_RESTARTS_AT_0
+BUG_TIMER_PRESC        caught by IntcTest; SVA: TIMER_TICK_EVERY_PRESC_PLUS_1
+BUG_GPIO_W1C           caught by GpioTest, RalW1cTest; SVA: GPIO_W1C_CLEARS_ONLY_WRITTEN_BITS
+BUG_GPIO_EDGE_LOST     caught by GpioTest; SVA: GPIO_EDGE_ALWAYS_CAPTURED
+BUG_INTC_MASK          caught by GpioTest, IntcTest, StressTest, RalW1cTest; SVA: SOC_IRQ_IS_MASKED_OR
+BUG_DECODE             caught by RegisterTest; SVA: SOC_DECODE_HOLE_ERRORS
+bugs caught: 12/12 
+drv:penable_idle       SVA: APB_PENABLE_DROPS_AFTER_READY, APB_PENABLE_NEEDS_PSEL
+drv:no_setup           SVA: APB_FIRST_CYCLE_IS_SETUP, APB_PENABLE_DROPS_AFTER_READY
+drv:abort_setup        SVA: APB_SETUP_THEN_ACCESS
+drv:drop_wait          SVA: APB_ACCESS_HOLDS_UNTIL_READY
+drv:addr_change        SVA: APB_ADDR_CTRL_STABLE
+drv:wdata_change       SVA: APB_WDATA_STABLE
+BUG_APB_SLVERR_SETUP   SVA: APB_SLVERR_ONLY_IN_ACCESS
+BUG_APB_PREADY_SETUP   SVA: APB_PREADY_ONLY_IN_ACCESS
+BUG_UART_W1C           RAL only: caught by RalW1cTest ['W1C of bit 2: uart_irq_st read 0x3c, mirror 0x38']
+BUG_GPIO_W1C           RAL only: caught by RalW1cTest ['W1C of bit 12: gpio_irq_st read 0x0, mirror 0x408']
+SVA properties that fired on their target bug: 21/21  (X-only, not testable on 2-state Verilator: APB_NO_X_ON_REQUEST, SOC_NO_X_ON_OUTPUTS)
+ 18:23:38 up 32 min,  0 user,  load average: 8.80, 38.94, 51.57

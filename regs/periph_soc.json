@@ -1,0 +1,59 @@
+{
+ "name": "periph_soc",
+ "doc": "Single source of the periph_soc register map. tools/reggen.py generates tb/ral_model.py (pyuvm register model), sw/periph_soc_regs.h (C header) and docs/register_map.md from this file. Field access policies use the UVM names (RW, RO, W1C). 'volatile' fields change without a bus write and are not compared on reads. 'tests' lists RAL sequences that must skip a register, with the reason.",
+ "blocks": [
+  {"name": "uart", "base": "0x0000", "hdl": "u_uart", "regs": [
+   {"name": "DATA", "offset": "0x00", "doc": "W: push the TX FIFO. R: pop the RX FIFO (0 when empty).",
+    "skip": {"bit_bash": "a write pushes the TX FIFO; a read pops the RX FIFO"},
+    "fields": [{"name": "data", "lsb": 0, "bits": 8, "access": "RW", "reset": 0, "volatile": true}]},
+   {"name": "STATUS", "offset": "0x04", "doc": "FIFO and transmitter status.", "fields": [
+    {"name": "tx_full", "lsb": 0, "bits": 1, "access": "RO", "reset": 0, "volatile": true, "hdl": "tx_full"},
+    {"name": "tx_empty", "lsb": 1, "bits": 1, "access": "RO", "reset": 1, "volatile": true, "hdl": "tx_empty"},
+    {"name": "rx_empty", "lsb": 2, "bits": 1, "access": "RO", "reset": 1, "volatile": true, "hdl": "rx_empty"},
+    {"name": "rx_full", "lsb": 3, "bits": 1, "access": "RO", "reset": 0, "volatile": true, "hdl": "rx_full"},
+    {"name": "tx_busy", "lsb": 4, "bits": 1, "access": "RO", "reset": 0, "volatile": true, "hdl": "tx_busy"}]},
+   {"name": "CTRL", "offset": "0x08", "doc": "UART control.", "fields": [
+    {"name": "enable", "lsb": 0, "bits": 1, "access": "RW", "reset": 0, "hdl": "enable"},
+    {"name": "parity_en", "lsb": 1, "bits": 1, "access": "RW", "reset": 0, "hdl": "par_en"},
+    {"name": "parity_odd", "lsb": 2, "bits": 1, "access": "RW", "reset": 0, "hdl": "par_odd"}]},
+   {"name": "BAUD", "offset": "0x0C", "doc": "Clocks per bit. Values below 4 read back as 4, so bit-bash runs on an all-ones background.",
+    "bit_bash_background": "0xFFFF", "fields": [
+    {"name": "div", "lsb": 0, "bits": 16, "access": "RW", "reset": 16, "hdl": "baud"}]},
+   {"name": "IRQ_EN", "offset": "0x10", "doc": "Interrupt enables, same bit order as IRQ_ST.", "fields": [
+    {"name": "en", "lsb": 0, "bits": 6, "access": "RW", "reset": 0, "hdl": "irq_en"}]},
+   {"name": "IRQ_ST", "offset": "0x14", "doc": "Pending interrupts. Bits 0-1 are levels; bits 2-5 are sticky and cleared by writing 1.", "fields": [
+    {"name": "rx_avail", "lsb": 0, "bits": 1, "access": "RO", "reset": 0, "volatile": true},
+    {"name": "tx_empty", "lsb": 1, "bits": 1, "access": "RO", "reset": 1, "volatile": true},
+    {"name": "rx_overrun", "lsb": 2, "bits": 1, "access": "W1C", "reset": 0, "hdl": "rx_ovr"},
+    {"name": "parity_err", "lsb": 3, "bits": 1, "access": "W1C", "reset": 0, "hdl": "par_err"},
+    {"name": "frame_err", "lsb": 4, "bits": 1, "access": "W1C", "reset": 0, "hdl": "frm_err"},
+    {"name": "tx_overflow", "lsb": 5, "bits": 1, "access": "W1C", "reset": 0, "hdl": "tx_ovf"}]},
+   {"name": "RX_COUNT", "offset": "0x18", "doc": "RX FIFO occupancy.", "fields": [
+    {"name": "count", "lsb": 0, "bits": 4, "access": "RO", "reset": 0, "volatile": true, "hdl": "rx_cnt"}]}]},
+  {"name": "timer", "base": "0x1000", "hdl": "u_tim", "regs": [
+   {"name": "CTRL", "offset": "0x00", "doc": "Timer control.", "fields": [
+    {"name": "enable", "lsb": 0, "bits": 1, "access": "RW", "reset": 0, "hdl": "enable"},
+    {"name": "auto_reload", "lsb": 1, "bits": 1, "access": "RW", "reset": 0, "hdl": "reload"},
+    {"name": "irq_en", "lsb": 2, "bits": 1, "access": "RW", "reset": 0, "hdl": "irq_en"}]},
+   {"name": "PRESC", "offset": "0x04", "doc": "The counter advances every PRESC+1 clocks.", "fields": [
+    {"name": "presc", "lsb": 0, "bits": 16, "access": "RW", "reset": 0, "hdl": "presc"}]},
+   {"name": "COMPARE", "offset": "0x08", "doc": "Compare value.", "fields": [
+    {"name": "compare", "lsb": 0, "bits": 32, "access": "RW", "reset": 4294967295, "hdl": "compare"}]},
+   {"name": "COUNT", "offset": "0x0C", "doc": "Counter; a write sets it. Changes on its own while enabled.", "fields": [
+    {"name": "count", "lsb": 0, "bits": 32, "access": "RW", "reset": 0, "volatile": true, "hdl": "count"}]},
+   {"name": "STATUS", "offset": "0x10", "doc": "Sticky compare match, cleared by writing 1.", "fields": [
+    {"name": "match", "lsb": 0, "bits": 1, "access": "W1C", "reset": 0, "hdl": "match"}]}]},
+  {"name": "gpio", "base": "0x2000", "hdl": "u_gpio", "regs": [
+   {"name": "OUT", "offset": "0x00", "doc": "Output values.", "fields": [{"name": "out", "lsb": 0, "bits": 16, "access": "RW", "reset": 0, "hdl": "gpio_out"}]},
+   {"name": "OE", "offset": "0x04", "doc": "Output enables.", "fields": [{"name": "oe", "lsb": 0, "bits": 16, "access": "RW", "reset": 0, "hdl": "gpio_oe"}]},
+   {"name": "IN", "offset": "0x08", "doc": "Synchronised input pins.", "fields": [{"name": "pins", "lsb": 0, "bits": 16, "access": "RO", "reset": 0, "volatile": true, "hdl": "s2"}]},
+   {"name": "RISE_EN", "offset": "0x0C", "doc": "Rising-edge interrupt enables.", "fields": [{"name": "rise_en", "lsb": 0, "bits": 16, "access": "RW", "reset": 0, "hdl": "rise_en"}]},
+   {"name": "FALL_EN", "offset": "0x10", "doc": "Falling-edge interrupt enables.", "fields": [{"name": "fall_en", "lsb": 0, "bits": 16, "access": "RW", "reset": 0, "hdl": "fall_en"}]},
+   {"name": "IRQ_ST", "offset": "0x14", "doc": "Sticky edge flags, cleared by writing 1.", "fields": [{"name": "flags", "lsb": 0, "bits": 16, "access": "W1C", "reset": 0, "hdl": "ist"}]}]},
+  {"name": "intc", "base": "0xF000", "hdl": "", "regs": [
+   {"name": "PENDING", "offset": "0x00", "doc": "Pending sources: [0] uart [1] timer [2] gpio.", "fields": [
+    {"name": "pending", "lsb": 0, "bits": 3, "access": "RO", "reset": 0, "volatile": true, "hdl": "pend"}]},
+   {"name": "ENABLE", "offset": "0x04", "doc": "Source enables for the IRQ pin.", "fields": [
+    {"name": "enable", "lsb": 0, "bits": 3, "access": "RW", "reset": 0, "hdl": "ien"}]}]}
+ ]
+}

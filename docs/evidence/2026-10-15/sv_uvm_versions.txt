@@ -1,0 +1,2 @@
+uvm-core tag 2020.3.1 commit 78c06547a2a0a29b3dc9dcafae62b75b2ff61544 from https://github.com/accellera-official/uvm-core
+image verilator/verilator:v5.052 verilator/verilator@sha256:a5b73e2fce0b2c483396f3800940f33b6faa802331a061c21694dd27b7352120

@@ -1,0 +1,343 @@
+{
+ "seeds": [
+  {
+   "seed": 1,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 7.7
+  },
+  {
+   "seed": 2,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 7.4
+  },
+  {
+   "seed": 3,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 8.0
+  },
+  {
+   "seed": 4,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 9.2
+  },
+  {
+   "seed": 5,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 7.9
+  },
+  {
+   "seed": 6,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 10.4
+  },
+  {
+   "seed": 7,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 8.9
+  },
+  {
+   "seed": 8,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 7.4
+  },
+  {
+   "seed": 9,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 10.0
+  },
+  {
+   "seed": 10,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass"
+   },
+   "seconds": 9.1
+  }
+ ],
+ "coverage": {
+  "bins": 82,
+  "hit": 82,
+  "percent": 100.0,
+  "holes": [],
+  "hits": {
+   "reg.uart.0x00.r": 296,
+   "reg.uart.0x00.w": 1065,
+   "reg.uart.0x04.r": 35142,
+   "reg.uart.0x04.w": 79,
+   "reg.uart.0x08.r": 71,
+   "reg.uart.0x08.w": 287,
+   "reg.uart.0x0c.r": 80,
+   "reg.uart.0x0c.w": 261,
+   "reg.uart.0x10.r": 74,
+   "reg.uart.0x10.w": 303,
+   "reg.uart.0x14.r": 167,
+   "reg.uart.0x14.w": 126,
+   "reg.uart.0x18.r": 990,
+   "reg.uart.0x18.w": 72,
+   "reg.timer.0x00.r": 113,
+   "reg.timer.0x00.w": 235,
+   "reg.timer.0x04.r": 60,
+   "reg.timer.0x04.w": 146,
+   "reg.timer.0x08.r": 67,
+   "reg.timer.0x08.w": 173,
+   "reg.timer.0x0c.r": 459,
+   "reg.timer.0x0c.w": 228,
+   "reg.timer.0x10.r": 156,
+   "reg.timer.0x10.w": 242,
+   "reg.gpio.0x00.r": 131,
+   "reg.gpio.0x00.w": 218,
+   "reg.gpio.0x04.r": 117,
+   "reg.gpio.0x04.w": 223,
+   "reg.gpio.0x08.r": 115,
+   "reg.gpio.0x08.w": 52,
+   "reg.gpio.0x0c.r": 121,
+   "reg.gpio.0x0c.w": 164,
+   "reg.gpio.0x10.r": 138,
+   "reg.gpio.0x10.w": 154,
+   "reg.gpio.0x14.r": 249,
+   "reg.gpio.0x14.w": 240,
+   "reg.intc.0x00.r": 257,
+   "reg.intc.0x00.w": 59,
+   "reg.intc.0x04.r": 176,
+   "reg.intc.0x04.w": 243,
+   "apb.slverr.unmapped_block": 171,
+   "apb.slverr.unmapped_offset": 244,
+   "apb.wait_state": 39111,
+   "apb.back_to_back": 2375,
+   "uart.cfg.none.min4": 112,
+   "uart.cfg.none.small": 191,
+   "uart.cfg.none.typical": 116,
+   "uart.cfg.even.min4": 82,
+   "uart.cfg.even.small": 101,
+   "uart.cfg.even.typical": 92,
+   "uart.cfg.odd.min4": 137,
+   "uart.cfg.odd.small": 141,
+   "uart.cfg.odd.typical": 83,
+   "uart.tx_fifo.full": 138,
+   "uart.tx_fifo.overflow": 10,
+   "uart.rx_fifo.full": 10,
+   "uart.rx.overrun": 10,
+   "uart.rx.parity_err": 20,
+   "uart.rx.frame_err": 10,
+   "uart.rx.glitch_rejected": 20,
+   "uart.irq.rx_avail": 103,
+   "uart.irq.tx_empty": 245,
+   "uart.irq.error": 9,
+   "uart.disabled_drop": 30,
+   "timer.oneshot_match": 60,
+   "timer.reload_match": 66,
+   "timer.presc0": 89,
+   "timer.presc_gt0": 37,
+   "timer.count_write_running": 65,
+   "timer.irq": 73,
+   "timer.compare0": 70,
+   "gpio.rise_irq": 114,
+   "gpio.fall_irq": 87,
+   "gpio.w1c": 206,
+   "gpio.edge_during_w1c": 23,
+   "gpio.multi_pin": 96,
+   "intc.uart.masked": 285,
+   "intc.uart.enabled": 19,
+   "intc.timer.masked": 63,
+   "intc.timer.enabled": 10,
+   "intc.gpio.masked": 87,
+   "intc.gpio.enabled": 18
+  }
+ },
+ "bugs": [
+  {
+   "bug": "BUG_UART_PARITY",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartTxTest",
+     "StressTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_UART_FIFO_DEPTH",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartTxTest",
+     "StressTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_RX_SAMPLE",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartRxTest",
+     "StressTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_UART_W1C",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartRxTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_UART_NOWAIT",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "RegisterTest",
+     "UartTxTest",
+     "UartRxTest",
+     "IntcTest",
+     "StressTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_UART_BAUD_CLAMP",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartTxTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_TIMER_RELOAD",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "TimerTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_TIMER_PRESC",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "IntcTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_GPIO_W1C",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "GpioTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_GPIO_EDGE_LOST",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "GpioTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_INTC_MASK",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "GpioTest",
+     "IntcTest",
+     "StressTest"
+    ]
+   }
+  },
+  {
+   "bug": "BUG_DECODE",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "RegisterTest"
+    ]
+   }
+  }
+ ]
+}

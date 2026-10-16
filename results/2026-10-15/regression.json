@@ -1,0 +1,591 @@
+{
+ "seeds": [
+  {
+   "seed": 1,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 12.7
+  },
+  {
+   "seed": 2,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 13.4
+  },
+  {
+   "seed": 3,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 13.7
+  },
+  {
+   "seed": 4,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 17.7
+  },
+  {
+   "seed": 5,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 15.5
+  },
+  {
+   "seed": 6,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 20.5
+  },
+  {
+   "seed": 7,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 20.1
+  },
+  {
+   "seed": 8,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 15.4
+  },
+  {
+   "seed": 9,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 18.6
+  },
+  {
+   "seed": 10,
+   "tests": {
+    "RegisterTest": "pass",
+    "UartTxTest": "pass",
+    "UartRxTest": "pass",
+    "TimerTest": "pass",
+    "GpioTest": "pass",
+    "IntcTest": "pass",
+    "StressTest": "pass",
+    "RalRegisterTest": "pass",
+    "RalW1cTest": "pass"
+   },
+   "seconds": 19.7
+  }
+ ],
+ "coverage": {
+  "bins": 82,
+  "hit": 82,
+  "percent": 100.0,
+  "holes": [],
+  "hits": {
+   "reg.uart.0x00.r": 306,
+   "reg.uart.0x00.w": 1155,
+   "reg.uart.0x04.r": 35162,
+   "reg.uart.0x04.w": 109,
+   "reg.uart.0x08.r": 151,
+   "reg.uart.0x08.w": 397,
+   "reg.uart.0x0c.r": 420,
+   "reg.uart.0x0c.w": 631,
+   "reg.uart.0x10.r": 214,
+   "reg.uart.0x10.w": 463,
+   "reg.uart.0x14.r": 317,
+   "reg.uart.0x14.w": 276,
+   "reg.uart.0x18.r": 1010,
+   "reg.uart.0x18.w": 102,
+   "reg.timer.0x00.r": 193,
+   "reg.timer.0x00.w": 315,
+   "reg.timer.0x04.r": 400,
+   "reg.timer.0x04.w": 496,
+   "reg.timer.0x08.r": 727,
+   "reg.timer.0x08.w": 853,
+   "reg.timer.0x0c.r": 479,
+   "reg.timer.0x0c.w": 268,
+   "reg.timer.0x10.r": 216,
+   "reg.timer.0x10.w": 302,
+   "reg.gpio.0x00.r": 471,
+   "reg.gpio.0x00.w": 568,
+   "reg.gpio.0x04.r": 457,
+   "reg.gpio.0x04.w": 573,
+   "reg.gpio.0x08.r": 135,
+   "reg.gpio.0x08.w": 82,
+   "reg.gpio.0x0c.r": 461,
+   "reg.gpio.0x0c.w": 534,
+   "reg.gpio.0x10.r": 478,
+   "reg.gpio.0x10.w": 504,
+   "reg.gpio.0x14.r": 629,
+   "reg.gpio.0x14.w": 620,
+   "reg.intc.0x00.r": 277,
+   "reg.intc.0x00.w": 89,
+   "reg.intc.0x04.r": 256,
+   "reg.intc.0x04.w": 333,
+   "apb.slverr.unmapped_block": 171,
+   "apb.slverr.unmapped_offset": 244,
+   "apb.wait_state": 40811,
+   "apb.back_to_back": 8512,
+   "uart.cfg.none.min4": 112,
+   "uart.cfg.none.small": 191,
+   "uart.cfg.none.typical": 116,
+   "uart.cfg.even.min4": 82,
+   "uart.cfg.even.small": 101,
+   "uart.cfg.even.typical": 92,
+   "uart.cfg.odd.min4": 137,
+   "uart.cfg.odd.small": 141,
+   "uart.cfg.odd.typical": 83,
+   "uart.tx_fifo.full": 148,
+   "uart.tx_fifo.overflow": 20,
+   "uart.rx_fifo.full": 20,
+   "uart.rx.overrun": 20,
+   "uart.rx.parity_err": 30,
+   "uart.rx.frame_err": 20,
+   "uart.rx.glitch_rejected": 30,
+   "uart.irq.rx_avail": 103,
+   "uart.irq.tx_empty": 259,
+   "uart.irq.error": 9,
+   "uart.disabled_drop": 30,
+   "timer.oneshot_match": 70,
+   "timer.reload_match": 66,
+   "timer.presc0": 99,
+   "timer.presc_gt0": 37,
+   "timer.count_write_running": 65,
+   "timer.irq": 73,
+   "timer.compare0": 70,
+   "gpio.rise_irq": 124,
+   "gpio.fall_irq": 87,
+   "gpio.w1c": 566,
+   "gpio.edge_during_w1c": 23,
+   "gpio.multi_pin": 106,
+   "intc.uart.masked": 299,
+   "intc.uart.enabled": 19,
+   "intc.timer.masked": 63,
+   "intc.timer.enabled": 10,
+   "intc.gpio.masked": 97,
+   "intc.gpio.enabled": 18
+  }
+ },
+ "bugs": [
+  {
+   "bug": "BUG_UART_PARITY",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartTxTest",
+     "StressTest"
+    ]
+   },
+   "sva_fired": [
+    "UART_TX_PARITY_CORRECT"
+   ]
+  },
+  {
+   "bug": "BUG_UART_FIFO_DEPTH",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartTxTest",
+     "StressTest"
+    ]
+   },
+   "sva_fired": [
+    "UART_TX_FULL_AT_DEPTH"
+   ]
+  },
+  {
+   "bug": "BUG_RX_SAMPLE",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartRxTest",
+     "StressTest",
+     "RalW1cTest"
+    ]
+   },
+   "sva_fired": [
+    "UART_RX_SAMPLES_MID_BIT"
+   ]
+  },
+  {
+   "bug": "BUG_UART_W1C",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartRxTest",
+     "RalW1cTest"
+    ]
+   },
+   "sva_fired": [
+    "UART_W1C_CLEARS_OVERRUN"
+   ]
+  },
+  {
+   "bug": "BUG_UART_NOWAIT",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "RegisterTest",
+     "UartTxTest",
+     "UartRxTest",
+     "IntcTest",
+     "StressTest",
+     "RalRegisterTest",
+     "RalW1cTest"
+    ]
+   },
+   "sva_fired": [
+    "UART_FIRST_ACCESS_CYCLE_WAITS"
+   ]
+  },
+  {
+   "bug": "BUG_UART_BAUD_CLAMP",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "UartTxTest"
+    ]
+   },
+   "sva_fired": [
+    "UART_BAUD_AT_LEAST_4"
+   ]
+  },
+  {
+   "bug": "BUG_TIMER_RELOAD",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "TimerTest"
+    ]
+   },
+   "sva_fired": [
+    "TIMER_MATCH_RESTARTS_AT_0"
+   ]
+  },
+  {
+   "bug": "BUG_TIMER_PRESC",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "IntcTest"
+    ]
+   },
+   "sva_fired": [
+    "TIMER_TICK_EVERY_PRESC_PLUS_1"
+   ]
+  },
+  {
+   "bug": "BUG_GPIO_W1C",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "GpioTest",
+     "RalW1cTest"
+    ]
+   },
+   "sva_fired": [
+    "GPIO_W1C_CLEARS_ONLY_WRITTEN_BITS"
+   ]
+  },
+  {
+   "bug": "BUG_GPIO_EDGE_LOST",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "GpioTest"
+    ]
+   },
+   "sva_fired": [
+    "GPIO_EDGE_ALWAYS_CAPTURED"
+   ]
+  },
+  {
+   "bug": "BUG_INTC_MASK",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "GpioTest",
+     "IntcTest",
+     "StressTest",
+     "RalW1cTest"
+    ]
+   },
+   "sva_fired": [
+    "SOC_IRQ_IS_MASKED_OR"
+   ]
+  },
+  {
+   "bug": "BUG_DECODE",
+   "caught": true,
+   "failing_tests": {
+    "1": [
+     "RegisterTest"
+    ]
+   },
+   "sva_fired": [
+    "SOC_DECODE_HOLE_ERRORS"
+   ]
+  }
+ ],
+ "sva_clean_failures": [],
+ "proto_bugs": [
+  {
+   "bug": "drv:penable_idle",
+   "sva_fired": [
+    "APB_PENABLE_DROPS_AFTER_READY",
+    "APB_PENABLE_NEEDS_PSEL"
+   ],
+   "tests": {
+    "RegisterTest": "pass"
+   }
+  },
+  {
+   "bug": "drv:no_setup",
+   "sva_fired": [
+    "APB_FIRST_CYCLE_IS_SETUP",
+    "APB_PENABLE_DROPS_AFTER_READY"
+   ],
+   "tests": {
+    "RegisterTest": "pass"
+   }
+  },
+  {
+   "bug": "drv:abort_setup",
+   "sva_fired": [
+    "APB_SETUP_THEN_ACCESS"
+   ],
+   "tests": {
+    "RegisterTest": "pass"
+   }
+  },
+  {
+   "bug": "drv:drop_wait",
+   "sva_fired": [
+    "APB_ACCESS_HOLDS_UNTIL_READY"
+   ],
+   "tests": {
+    "RegisterTest": "pass"
+   }
+  },
+  {
+   "bug": "drv:addr_change",
+   "sva_fired": [
+    "APB_ADDR_CTRL_STABLE"
+   ],
+   "tests": {
+    "RegisterTest": "fail"
+   }
+  },
+  {
+   "bug": "drv:wdata_change",
+   "sva_fired": [
+    "APB_WDATA_STABLE"
+   ],
+   "tests": {
+    "RegisterTest": "pass"
+   }
+  },
+  {
+   "bug": "BUG_APB_SLVERR_SETUP",
+   "sva_fired": [
+    "APB_SLVERR_ONLY_IN_ACCESS"
+   ],
+   "tests": {
+    "RegisterTest": "fail"
+   }
+  },
+  {
+   "bug": "BUG_APB_PREADY_SETUP",
+   "sva_fired": [
+    "APB_PREADY_ONLY_IN_ACCESS"
+   ],
+   "tests": {
+    "RegisterTest": "fail"
+   }
+  }
+ ],
+ "sva_targets": {
+  "APB_PENABLE_NEEDS_PSEL": {
+   "bug": "drv:penable_idle",
+   "fired": true
+  },
+  "APB_FIRST_CYCLE_IS_SETUP": {
+   "bug": "drv:no_setup",
+   "fired": true
+  },
+  "APB_PENABLE_DROPS_AFTER_READY": {
+   "bug": "drv:no_setup",
+   "fired": true
+  },
+  "APB_SETUP_THEN_ACCESS": {
+   "bug": "drv:abort_setup",
+   "fired": true
+  },
+  "APB_ACCESS_HOLDS_UNTIL_READY": {
+   "bug": "drv:drop_wait",
+   "fired": true
+  },
+  "APB_ADDR_CTRL_STABLE": {
+   "bug": "drv:addr_change",
+   "fired": true
+  },
+  "APB_WDATA_STABLE": {
+   "bug": "drv:wdata_change",
+   "fired": true
+  },
+  "APB_SLVERR_ONLY_IN_ACCESS": {
+   "bug": "BUG_APB_SLVERR_SETUP",
+   "fired": true
+  },
+  "APB_PREADY_ONLY_IN_ACCESS": {
+   "bug": "BUG_APB_PREADY_SETUP",
+   "fired": true
+  },
+  "SOC_DECODE_HOLE_ERRORS": {
+   "bug": "BUG_DECODE",
+   "fired": true
+  },
+  "SOC_IRQ_IS_MASKED_OR": {
+   "bug": "BUG_INTC_MASK",
+   "fired": true
+  },
+  "UART_FIRST_ACCESS_CYCLE_WAITS": {
+   "bug": "BUG_UART_NOWAIT",
+   "fired": true
+  },
+  "UART_TX_FULL_AT_DEPTH": {
+   "bug": "BUG_UART_FIFO_DEPTH",
+   "fired": true
+  },
+  "UART_BAUD_AT_LEAST_4": {
+   "bug": "BUG_UART_BAUD_CLAMP",
+   "fired": true
+  },
+  "UART_W1C_CLEARS_OVERRUN": {
+   "bug": "BUG_UART_W1C",
+   "fired": true
+  },
+  "UART_TX_PARITY_CORRECT": {
+   "bug": "BUG_UART_PARITY",
+   "fired": true
+  },
+  "UART_RX_SAMPLES_MID_BIT": {
+   "bug": "BUG_RX_SAMPLE",
+   "fired": true
+  },
+  "TIMER_TICK_EVERY_PRESC_PLUS_1": {
+   "bug": "BUG_TIMER_PRESC",
+   "fired": true
+  },
+  "TIMER_MATCH_RESTARTS_AT_0": {
+   "bug": "BUG_TIMER_RELOAD",
+   "fired": true
+  },
+  "GPIO_W1C_CLEARS_ONLY_WRITTEN_BITS": {
+   "bug": "BUG_GPIO_W1C",
+   "fired": true
+  },
+  "GPIO_EDGE_ALWAYS_CAPTURED": {
+   "bug": "BUG_GPIO_EDGE_LOST",
+   "fired": true
+  }
+ },
+ "ral_bugs": [
+  {
+   "bug": "BUG_UART_W1C",
+   "failing_tests": [
+    "RalW1cTest"
+   ],
+   "ral_mismatches": [
+    "W1C of bit 2: uart_irq_st read 0x3c, mirror 0x38",
+    "W1C of bit 3: uart_irq_st read 0x30, mirror 0x34",
+    "W1C of bit 2: uart_irq_st read 0x3c, mirror 0x38"
+   ]
+  },
+  {
+   "bug": "BUG_GPIO_W1C",
+   "failing_tests": [
+    "RalW1cTest"
+   ],
+   "ral_mismatches": [
+    "W1C of bit 12: gpio_irq_st read 0x0, mirror 0x408",
+    "W1C of bit 12: gpio_irq_st read 0x0, mirror 0x408"
+   ]
+  }
+ ]
+}
